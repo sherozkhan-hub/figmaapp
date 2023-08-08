@@ -2,14 +2,16 @@ import Heading from "./Heading";
 import Paragraph from "./Paragraph";
 import Groups from "./Groups";
 import Dots from "./Dots";
+import { forwardRef } from "react";
 
-const Bussiness = () => {
+// eslint-disable-next-line react/display-name
+const Bussiness = forwardRef((props, ref) => {
   const heading = "How can we Help your Bussiness?";
   const paragraph = `We
   build readymade websites mobile applications and elaborate online
   business services`;
   return (
-    <section className="flex w-[70.8rem] h-[54.18rem] relative">
+    <section className="flex w-[70.8rem] h-[54.18rem] relative" ref={ref}>
       <div className="w-[40%] self-center pl-4">
         <div
           style={{ borderRadius: "6.25rem 0rem 0rem 0rem" }}
@@ -22,6 +24,6 @@ const Bussiness = () => {
       <Groups />
     </section>
   );
-};
+});
 
 export default Bussiness;

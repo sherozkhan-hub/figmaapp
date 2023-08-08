@@ -1,6 +1,12 @@
-const Navbar = () => {
+/* eslint-disable react/display-name */
+import { forwardRef } from "react";
+
+const Navbar = forwardRef((props, ref) => {
   return (
-    <nav className="md:flex justify-between my-[2.62rem] place-items-center lg:max-w-[75rem] mx-auto">
+    <nav
+      ref={ref}
+      className="md:flex justify-between my-[2.62rem] place-items-center lg:max-w-[75rem] mx-auto"
+    >
       <div className="flex  text-[1.69669rem]">
         <h2 className="font-[700]">A+</h2>
         <h2 className="font-normal">Studio</h2>
@@ -39,6 +45,6 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-};
+});
 
 export default Navbar;
